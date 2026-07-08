@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 119 90 25; /* #775a19 */
+    --color-primary-container: 197 160 89; /* #c5a059 */
+    --color-on-primary: 255 255 255;
+    --color-on-primary-container: 34 25 5;
+    
+    --color-surface: 251 249 249; /* #fbf9f9 */
+    --color-surface-dim: 239 237 237; /* Lighter dim for less contrast issues */
+    --color-surface-variant: 228 226 226; /* #e4e2e2 */
+    
+    --color-on-surface: 27 28 28; /* #1b1c1c */
+    --color-on-surface-variant: 78 70 57; /* #4e4639 */
+    
+    --color-outline: 116 119 117;
+    --color-outline-variant: 196 199 197;
+    
+    --color-error: 186 26 26;
+    --color-on-error: 255 255 255;
+    --color-error-container: 255 218 214;
+  }
+
+  .dark {
+    --color-primary: 255 222 165; /* #ffdea5 */
+    --color-primary-container: 119 90 25; /* #775a19 */
+    --color-on-primary: 15 23 42;
+    --color-on-primary-container: 255 222 165;
+    
+    --color-surface: 15 23 42; /* #0f172a */
+    --color-surface-dim: 17 24 39; /* #111827 */
+    --color-surface-variant: 30 41 59; /* #1e293b */
+    
+    --color-on-surface: 248 250 252; /* #f8fafc */
+    --color-on-surface-variant: 148 163 184; /* #94a3b8 */
+    
+    --color-outline: 100 116 139;
+    --color-outline-variant: 51 65 85;
+    
+    --color-error: 255 180 171;
+    --color-on-error: 105 0 5;
+    --color-error-container: 147 0 10;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  p {
+    @apply font-normal text-on-surface-variant;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-3 bg-surface-dim border border-outline-variant rounded-lg text-sm focus:ring-2 focus:ring-primary focus:outline-none text-on-surface transition-colors;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-bold rounded-xl shadow-md transition-all hover:-translate-y-0.5 hover:shadow-xl duration-300;
+  }
+  
+  .card-base {
+    @apply bg-surface rounded-2xl shadow-md border border-outline-variant/50 transition-shadow duration-300 hover:shadow-xl;
+  }
+}
+
+/* Custom Scrollbar for sleek UI */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+}

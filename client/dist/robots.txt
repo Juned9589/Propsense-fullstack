@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://propsense.com/sitemap.xml
+
+# Crawl delay for bots
+Crawl-delay: 10
+
+# Disallow admin and private routes
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /profile/
+Disallow: /deals/
+Disallow: /api/

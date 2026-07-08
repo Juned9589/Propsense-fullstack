@@ -1,0 +1,1 @@
+import{j as o,m as a}from"./motion-E_K25NKp.js";import"./vendor-BIH_6n-O.js";function s({children:i,className:t=""}){return o.jsx(a.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},exit:{opacity:0,y:-20},transition:{duration:.3},className:t,children:i})}export{s as P};
