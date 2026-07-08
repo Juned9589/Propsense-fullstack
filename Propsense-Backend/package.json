@@ -16,7 +16,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch server/server.js"
+    "dev": "node erver/server.js"
   },
   "dependencies": {
     "abort-controller": "^3.0.0",
